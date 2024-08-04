@@ -1,38 +1,42 @@
 .node {
     width: 30px;
     height: 30px;
-    outline: 1px solid rgb(175, 216, 248);
+    /* outline: 1px solid rgb(175, 216, 248); */
     display: inline-block;
     border: 1px solid black;
   }
   
   .node-finish {
-    background-color: red;
+    background-color: orangered;
   }
   
   .node-start {
-    background-color: green;
+    background-color: orange;
   }
   
+  .node-weighted {
+    background-color: green;
+  }
+
   .node-wall {
-    background-color: rgb(12, 53, 71);
+    background-color: #273b5c;
   }
   
   .node-wall-animation {
-    animation: wallAnimation 0.3s ease-out forwards;
+    animation: wallAnimation 0.25s ease-out forwards;
   }
   
   
   @keyframes wallAnimation {
     0% {
       transform: scale(0.3);
-      background-color: rgba(12, 53, 71, 0.5);
+      background-color: #273b5c;
       border-radius: 100%;
     }
   
     100% {
       transform: scale(1);
-      background-color: rgb(12, 53, 71);
+      background-color: #273b5c;
       border-radius: 0;
     }
   }
@@ -96,4 +100,8 @@
       transform: scale(1);
       background-color: rgb(255, 254, 106);
     }
+  }
+
+  .node-shortest-path-modified {
+    background-color: rgb(255, 254, 106);
   }
